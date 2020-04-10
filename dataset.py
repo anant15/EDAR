@@ -28,7 +28,7 @@ class Dataset(object):
 
         # additive jpeg noise
         buffer = io.BytesIO()
-        label.save(buffer, format='jpeg', quality=random.range(self.jpeg_quality+1))
+        label.save(buffer, format='jpeg', quality=self.jpeg_quality)
 
         input = Image.open(buffer).convert('RGB')
 
